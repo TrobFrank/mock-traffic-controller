@@ -8,11 +8,10 @@ function Street(props){
         crossWalk,
         leftArrow,
     } = props;
-    //console.log('Street: ', trafficData);
     return (
-        <div className={`street ${id} ${direction} ${lanes} ${crossWalk} ${leftArrow}`}>
+        <div className={`street ${direction}`}>
             <span className={`trafficLight ${trafficData[direction].color}`}></span>
-            <span className={`streetName`}>{label}</span>
+            { direction == 'ns' ? <span className={`direction`}>N</span> : null}
         </div>
     )
 }

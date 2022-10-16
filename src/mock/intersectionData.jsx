@@ -18,7 +18,7 @@ const intersectionData = [
                 leftArrow: false,
             }
         ]
-    }
+    },   
 ]
 
 export default intersectionData
