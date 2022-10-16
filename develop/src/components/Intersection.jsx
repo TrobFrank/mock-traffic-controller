@@ -1,13 +1,11 @@
 import Street from "./Street"
 
 function Intersection({intersection, trafficData}) {
-  
   if (!intersection || !trafficData) return null
   return (
     <div className="intersection">
       {
         intersection.map(street => {
-          
           return <Street 
               trafficData={trafficData}
               key={street.id} 
@@ -21,6 +19,5 @@ function Intersection({intersection, trafficData}) {
       }
     </div>
   )
-  
 }
 export default Intersection

@@ -3,24 +3,32 @@
   --yellow: rgb(252, 248, 41);
   --red: rgb(230, 26, 26);
   --black: #333;
+  --lightPosition: 33.334%;
 }
 
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
 body {
   font-size:24px;
+  background:#fbfbfb;
+  overflow:hidden;
+}
+
+.intersections {
+  display:flex;
+  flex-wrap:wrap;
+  background: linear-gradient(45deg, #7ad173, #afcf53);
+  box-shadow: 0px 0px 20px -5px rgba(0,0,0, 0.5);
 }
 
 .intersection {
   position:relative;
-  width:10em;
-  height:10em;
-  border:1px solid var(--black);
+  width:15em;
+  height:15em;
 }
 
 .street {
@@ -32,6 +40,7 @@ body {
   height: 100%;
 }
 
+.trafficLight:before,
 .trafficLight:after {
   content: '';
   display: block;
@@ -40,18 +49,35 @@ body {
   border-radius: 1em;
 }
 
+
+.trafficLight:after {
+  position: absolute;
+  transform: translate(calc(var(--lightPosition)*-1), calc(var(--lightPosition)*-1));
+  top: var(--lightPosition);
+  left: var(--lightPosition);
+}
+
+.trafficLight:before {
+  position: absolute;
+  transform: translate(var(--lightPosition), var(--lightPosition));
+  bottom: var(--lightPosition);
+  right: var(--lightPosition);
+}
+
+.trafficLight.green:before,
 .trafficLight.green:after  {
   background:var(--green);
 }
 
+.trafficLight.yellow:before,
 .trafficLight.yellow:after {
   background: var(--yellow);
 }
 
+.trafficLight.red:before,
 .trafficLight.red:after {
   background: var(--red);
 }
-
 
 .street.ns {
   transform: translate(-50%, 0)
@@ -66,12 +92,12 @@ body {
 }
 .street.ns .streetName {
   position: absolute;
-  top:-2em;
+  top: -2em;
   white-space: nowrap;
+  transform: translate(-50%, 0);
 }
 
-.street.ew .streetName {
-  position:absolute;
-  right:-5em;
-  white-space: nowrap;
+.street .direction {
+  color:white;
 }
+
