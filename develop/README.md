@@ -25,10 +25,6 @@ To run tests using vitest
 
 ### `npm run test`
 
-To run tests using vitest with coverage
-
-### `npm run coverage`
-
 
 ## Unknowns/Questions
 
@@ -39,5 +35,5 @@ What kind of experience is expected with the following technologies: `React Nati
 What is this role going to be doing in the first 3 months, 6 months, 12 months? \
 What is the mentorship like at WCG, for both teaching and learning? \
 Who does this role respond to? \
-Ways this role can make the most impact? \
+Ways this role can make the most impact?
 
