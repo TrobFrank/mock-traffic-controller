@@ -1,0 +1,77 @@
+:root {
+  --green: rgb(41, 252, 41);
+  --yellow: rgb(252, 248, 41);
+  --red: rgb(230, 26, 26);
+  --black: #333;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+body {
+  font-size:24px;
+}
+
+.intersection {
+  position:relative;
+  width:10em;
+  height:10em;
+  border:1px solid var(--black);
+}
+
+.street {
+  position: absolute;
+  background:var(--black);
+  width: 1em;
+  top: 0;
+  left: 50%;
+  height: 100%;
+}
+
+.trafficLight:after {
+  content: '';
+  display: block;
+  width: 1em;
+  height: 1em;
+  border-radius: 1em;
+}
+
+.trafficLight.green:after  {
+  background:var(--green);
+}
+
+.trafficLight.yellow:after {
+  background: var(--yellow);
+}
+
+.trafficLight.red:after {
+  background: var(--red);
+}
+
+
+.street.ns {
+  transform: translate(-50%, 0)
+}
+
+.street.ew {
+  height:1em;
+  width:100%;
+  left:0;
+  top:50%;
+  transform: translate(0%, -50%)
+}
+.street.ns .streetName {
+  position: absolute;
+  top:-2em;
+  white-space: nowrap;
+}
+
+.street.ew .streetName {
+  position:absolute;
+  right:-5em;
+  white-space: nowrap;
+}
