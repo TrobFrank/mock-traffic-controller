@@ -11,14 +11,17 @@ function TrafficController() {
   useEffect(() => {
     let nextPhaseIndex = trafficFlowIndex.current < trafficFlow.length - 1 ? trafficFlowIndex.current + 1 : 0;
     let nextPhaseData = trafficFlow[nextPhaseIndex] !== undefined ? trafficFlow[nextPhaseIndex] : trafficFlow[0];
-    setTimeout(function(){
+    let controller = setTimeout(function(){
       setTrafficData(nextPhaseData);
       trafficFlowIndex.current = nextPhaseIndex;
     }, trafficFlow[trafficFlowIndex.current].duration)
+
+    return () => clearTimeout(controller);
+
   }, [trafficData])
 
   return (
-      <div className={`intersections`}>
+      <div className={`intersections`} role="main" style={{display: "flex"}}>
       {
         intersectionData.map((int, i) => {
           return <Intersection intersection={int.intersection} key={i} trafficData={trafficData} />

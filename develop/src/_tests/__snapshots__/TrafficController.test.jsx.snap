@@ -1,0 +1,7 @@
+// Vitest Snapshot v1
+
+exports[`traffic controller > snapshot 1`] = `
+{
+  "foo": "bar",
+}
+`;
