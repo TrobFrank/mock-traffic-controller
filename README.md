@@ -24,16 +24,3 @@ Runs the app in the development mode. Look for the port number in your terminal.
 To run tests using vitest
 
 ### `npm run test`
-
-
-## Unknowns/Questions
-
-What does a typical tech stack look like for the typical WCG client? \ 
-What testing libraries are most often used at WCG? \
-What cloud services are a 'must know' for this role? \
-What kind of experience is expected with the following technologies: `React Native, Angular, CI/CD` \
-What is this role going to be doing in the first 3 months, 6 months, 12 months? \
-What is the mentorship like at WCG, for both teaching and learning? \
-Who does this role respond to? \
-Ways this role can make the most impact?
-

@@ -22,6 +22,7 @@ function TrafficController() {
 
   return (
       <div className={`intersections`} role="main" style={{display: "flex"}}>
+      <div class="phase">{`Phase: ${trafficFlowIndex.current}`}</div>
       {
         intersectionData.map((int, i) => {
           return <Intersection intersection={int.intersection} key={i} trafficData={trafficData} />

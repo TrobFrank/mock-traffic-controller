@@ -19,6 +19,26 @@ const intersectionData = [
             }
         ]
     },   
+    {
+        intersection: [
+            {
+                id: 3,
+                label: "Electric Avenue",
+                direction: "ns",
+                lanes: 2,
+                crossWalk: false,
+                leftArrow: true,
+            },
+            {
+                id: 4,
+                label: "Dream Street",
+                direction: "ew",
+                lanes: 2,
+                crossWalk: false,
+                leftArrow: true,
+            }
+        ]
+    },
 ]
 
 export default intersectionData
